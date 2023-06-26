@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="bandsawmillSellpoint.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="9.0.4"/>
+  </Asset>
+
+  <Files>
+    <File fileId="2" filename="$data/maps/textures/shared/warningStripes_diffuse.png"/>
+    <File fileId="3" filename="$data/maps/textures/shared/warningStripes_normal.png"/>
+    <File fileId="4" filename="$data/maps/textures/shared/warningStripes_specular.png"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="lambert1" materialId="5" diffuseColor="0.494118 0.494118 0.494118 1">
+    </Material>
+    <Material name="warningStripes_mat" materialId="6">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="bandsawmillSellpoint.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+      <TransformGroup name="bandsawMill" nodeId="13">
+        <TransformGroup name="visuals" nodeId="14">
+          <TransformGroup name="sawmillLinkNode" translation="-3.5 -0.068 11" rotation="0 180 0" nodeId="15"/>
+        </TransformGroup>
+        <TransformGroup name="clearAreas" nodeId="16">
+          <TransformGroup name="clearArea1Start" translation="-6 0 -6" nodeId="17">
+            <TransformGroup name="clearArea1Width" translation="0 0 12" nodeId="18"/>
+            <TransformGroup name="clearArea1Height" translation="12 0 0" nodeId="19"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="levelAreas" nodeId="20">
+          <TransformGroup name="levelArea1Start" translation="-6 0 -6" nodeId="21">
+            <TransformGroup name="levelArea1Width" translation="0 0 12" nodeId="22"/>
+            <TransformGroup name="levelArea1Height" translation="12 0 0" nodeId="23"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="indoorAreas" nodeId="24"/>
+        <TransformGroup name="testAreas" nodeId="25">
+          <TransformGroup name="testArea1Start" translation="-5.5 0 -5.5" nodeId="26">
+            <TransformGroup name="testArea1End" translation="11 2 11" nodeId="27"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="tipOcclusionUpdateAreas" nodeId="28">
+          <TransformGroup name="tipOcclusionUpdateArea1Start" translation="-5.5 0 -5.5" nodeId="29">
+            <TransformGroup name="tipOcclusionUpdateArea1End" translation="11 -9.09495e-15 11" nodeId="30"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="triggers" nodeId="31">
+          <Shape shapeId="1" name="infoTrigger" scale="0.6 0.6 0.6" visibility="false" static="true" trigger="true" collisionMask="1048576" nodeId="32" materialIds="5" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <TransformGroup name="teleportNode" translation="-2.37826 -1.44772 0" nodeId="33"/>
+          <Shape shapeId="2" name="playerTrigger" static="true" trigger="true" collisionMask="3145728" clipDistance="600" nodeId="34" materialIds="5" castsShadows="true" receiveShadows="true" nonRenderable="true">
+            <TransformGroup name="playerTriggerMarker" translation="-6.10352e-07 0.2 -3.05176e-07" nodeId="35"/>
+          </Shape>
+        </TransformGroup>
+        <TransformGroup name="collisions" nodeId="36"/>
+        <TransformGroup name="sellingStation" nodeId="37">
+          <Shape shapeId="3" name="unloadWoodTrigger" scale="1.5 1 1.5" visibility="false" static="true" trigger="true" collisionMask="1090521088" objectMask="16777216" nodeId="38" materialIds="5" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="2" name="unloadWoodPlayerTrigger" translation="0 0.2 -1.2" visibility="false" static="true" trigger="true" collisionMask="3145728" clipDistance="600" objectMask="1048576" nodeId="39" materialIds="5" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <TransformGroup name="unloadWoodPlayerTriggerMarker" translation="0 0.2 -1.2" nodeId="40"/>
+          <TransformGroup name="unloadWoodTriggerMarker" nodeId="41"/>
+          <TransformGroup name="unloadWoodTriggerAINode" translation="-2 1.51833e-07 0" rotation="0 -5.00896e-06 0" nodeId="42"/>
+          <Shape shapeId="4" name="containerTrigger" translation="0 0 8.71798e-07" rotation="-0 90 0" scale="1 1 2" visibility="false" kinematic="true" trigger="true" nodeId="43" materialIds="5" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <TransformGroup name="warningStripeGroup-wood" translation="0 0.01 0" nodeId="44">
+            <Shape shapeId="5" name="warningStripe" translation="5 0 5" rotation="90 90 3.47553e-05" scale="0.01 0.01 0.01" nodeId="45" materialIds="6"/>
+            <Shape shapeId="5" name="warningStripe" translation="-5 0 5" rotation="90 0 1.33731e-05" scale="0.01 0.01 0.01" nodeId="46" materialIds="6"/>
+            <Shape shapeId="5" name="warningStripe" translation="5 0 -5" rotation="-90 0 -180" scale="0.01 0.01 0.01" nodeId="47" materialIds="6"/>
+            <Shape shapeId="5" name="warningStripe" translation="-5 0 -5" rotation="-90 -90 -180" scale="0.01 0.01 0.01" nodeId="48" materialIds="6"/>
+          </TransformGroup>
+        </TransformGroup>
+      </TransformGroup>
+  </Scene>
+
+</i3D>

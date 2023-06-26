@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
-<mineshaftBoost>
-    <!-- The factor will be applied to the current rate (2000 litersPerHour) -->
-    <overrideFactor>2.0</overrideFactor>
-
-    <!-- OR you can force the output to any rate. A forceOutputTo value will take precedence  -->
-    <!-- <forceOutputTo>5000</forceOutputTo> -->
-</mineshaftBoost>

@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable type="productionPoint" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs22/placeable.xsd">
+    <storeData>
+        <name>$l10n_shopItem_bandsawMillShed</name>
+        <functions>
+            <function>$l10n_function_productionPoint</function>
+        </functions>
+        <image>icons/store_bandsawMillShed.png</image>
+        <price>10000</price>
+        <lifetime>100</lifetime>
+        <canBeSold>true</canBeSold>
+        <showInStore>true</showInStore>
+        <rotation>110</rotation>
+        <brand>WOODMIZER</brand>
+        <species>placeable</species>
+        <category>productionPoints</category>
+        <brush>
+            <type>placeable</type>
+            <category>production</category>
+            <tab>factories</tab>
+        </brush>
+        <storeIconRendering>
+            <settings cameraXRot="-15" cameraYRot="-45" advancedBoundingBox="true"/>
+        </storeIconRendering>
+    </storeData>
+
+    <base>
+        <filename>i3d/bandsawmillShed.i3d</filename>
+        <canBeRenamed>true</canBeRenamed>
+    </base>
+
+    <placement useRandomYRotation="false" useManualYRotation="true" >
+        <testAreas>
+            <testArea startNode="testArea1Start" endNode="testArea1End" />
+        </testAreas>
+        <sounds>
+            <place template="smallImp" />
+        </sounds>
+    </placement>
+
+    <clearAreas>
+        <clearArea startNode="clearArea1Start" widthNode="clearArea1Width" heightNode="clearArea1Height"/>
+    </clearAreas>
+
+    <leveling requireLeveling="true" maxSmoothDistance="10" maxSlope="75" maxEdgeAngle="30" >
+        <levelAreas>
+            <levelArea startNode="levelArea1Start" widthNode="levelArea1Width" heightNode="levelArea1Height" groundType="dirt"/>
+        </levelAreas>
+    </leveling>
+
+    <indoorAreas />
+
+    <tipOcclusionUpdateAreas>
+        <tipOcclusionUpdateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End" />
+    </tipOcclusionUpdateAreas>
+
+    <ai>
+        <updateAreas>
+            <updateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End" />
+        </updateAreas>
+    </ai>
+
+    <infoTrigger triggerNode="infoTrigger"/>
+
+    <hotspots>
+        <hotspot type="PRODUCTION_POINT" linkNode="teleportNode" teleportNode="teleportNode" />
+    </hotspots>
+
+    <dynamicallyLoadedParts>
+        <dynamicallyLoadedPart filename="$pdlc/forestryPack/placeables/productionPoints/sawmillPlaceable/sawmillPlaceable.i3d" node="0|1" linkNode="sawmillLinkNode" />
+    </dynamicallyLoadedParts>
+
+    <!-- <lights>
+        <group weatherRequiredFlags="NIGHT" />
+
+        <sharedLight filename="$data/shared/assets/lights/terraLed/fluorescentTube50W.xml"          linkNode="linkedLight1" groupIndex="1"/>
+        <sharedLight filename="$data/shared/assets/lights/terraLed/fluorescentTube50W.xml"          linkNode="linkedLight2" groupIndex="1"/>
+        <sharedLight filename="$data/shared/assets/lights/terraLed/fluorescentTube50W.xml"          linkNode="linkedLight3" groupIndex="1"/>
+        <sharedLight filename="$data/shared/assets/lights/terraLed/fluorescentTube50W.xml"          linkNode="linkedLight4" groupIndex="1"/>
+        <sharedLight filename="$data/shared/assets/lights/lizard/buildings/industrialWallLight.xml" linkNode="linkedLight5" groupIndex="1"/>
+        <sharedLight filename="$data/shared/assets/lights/lizard/buildings/industrialWallLight.xml" linkNode="linkedLight6" groupIndex="1"/>
+        <sharedLight filename="$data/shared/assets/lights/lizard/buildings/industrialWallLight.xml" linkNode="linkedLight7" groupIndex="1"/>
+        <sharedLight filename="$data/shared/assets/lights/terraLed/fluorescentTube50W.xml"          linkNode="linkedLight8" groupIndex="1"/>
+        <sharedLight filename="$data/shared/assets/lights/terraLed/fluorescentTube50W.xml"          linkNode="linkedLight9" groupIndex="1"/>
+
+        <lightShape node="interiorSelfIllum" groupIndex="1"/>
+        <lightShape node="interiorSelfIllumLOD" groupIndex="1"/>
+
+        <realLights>
+            <low>
+                <light node="realLightsLow" groupIndex="1"/>
+            </low>
+            <high>
+                <light node="realLightsHigh" groupIndex="1"/>
+            </high>
+        </realLights>
+    </lights> -->
+
+    <productionPoint>
+        <productions>
+            <production id="boards" name="%s (%s)" params="$l10n_fillType_wood|$l10n_fillType_boards" cyclesPerHour="10" costsPerActiveHour="1">
+                <inputs>
+                    <input fillType="WOOD" amount="100" />
+                </inputs>
+                <outputs>
+                    <output fillType="BOARDS" amount="80" />
+                    <output fillType="WOODCHIPS" amount="10" />
+                </outputs>
+            </production>
+        
+            <!-- DLC -->
+            <production id="woodbeam" name="%s (%s)" params="$l10n_fillType_wood|$l10n_fillType_woodBeam" cyclesPerHour="1" costsPerActiveHour="2">
+                <inputs>
+                    <input fillType="WOOD" amount="1000" />
+                </inputs>
+                <outputs>
+                    <output fillType="WOODBEAM" amount="870" />
+                    <output fillType="WOODCHIPS" amount="45" />
+                </outputs>
+            </production>
+            <production id="planks" name="%s (%s)" params="$l10n_fillType_wood|$l10n_fillType_planks" cyclesPerHour="1" costsPerActiveHour="2">
+                <inputs>
+                    <input fillType="WOOD" amount="1000" />
+                </inputs>
+                <outputs>
+                    <output fillType="PLANKS" amount="870" />
+                    <output fillType="WOODCHIPS" amount="230" />
+                </outputs>
+            </production>
+        </productions>
+
+        <storage isExtension="false" fillLevelSyncThreshold="50" >
+            <capacity fillType="WOOD"      capacity="100000" />
+            <capacity fillType="BOARDS"    capacity="18000" />
+            <capacity fillType="WOODCHIPS" capacity="10000"  />
+
+            <!-- Platinum DLC -->
+            <capacity fillType="WOODBEAM" capacity="10000" />
+            <capacity fillType="PLANKS" capacity="10000" />
+        </storage>
+
+        <sellingStation node="sellingStation" supportsExtension="false">
+            <unloadTrigger fillTypes="WOOD" >
+                <woodTrigger triggerNode="unloadWoodTrigger" activationTriggerNode="unloadWoodPlayerTrigger" />
+            </unloadTrigger>
+            <!-- <unloadTrigger fillTypes="WOOD" priceScale="1.75">
+                <woodTrigger triggerNode="unloadContainerTrigger" class="boardUnloadTrigger" />
+                <fillTypeConversion incomingFillType="WOOD" outgoingFillType="WOOD" ratio="1.75" />
+            </unloadTrigger> -->
+        </sellingStation>
+
+        <loadingStation node="loadingStation" supportsExtension="false">
+            <loadTrigger fillTypes="WOODCHIPS" triggerNode="loadWoodchipTrigger" fillLitersPerSecond="1000">
+                <!-- <effectNode effectClass="PipeEffect" effectNode="0|1|0|0|2|0" materialType="pipe" materialTypeId="1" fadeTime="0.5" maxBending="0" controlPoint="3.25 0 0 0"/> -->
+                <!-- <effectNode                          effectNode="0|1|0|0|2|1" materialType="smoke"     materialTypeId="1" fadeTime="0.5" /> -->
+            </loadTrigger>
+        </loadingStation>
+
+        <palletSpawner node="productionSpawners">
+            <spawnPlaces>
+                <spawnPlace startNode="boardSpawn1Start" endNode="boardSpawn1End" fillTypes="BOARDS"/>
+                <spawnPlace startNode="boardSpawn2Start" endNode="boardSpawn2End" fillTypes="BOARDS"/>
+                <spawnPlace startNode="boardSpawn3Start" endNode="boardSpawn3End" fillTypes="BOARDS"/>
+                <spawnPlace startNode="boardSpawn4Start" endNode="boardSpawn4End" fillTypes="BOARDS"/>
+                <spawnPlace startNode="boardSpawn5Start" endNode="boardSpawn5End" fillTypes="BOARDS"/>
+                <spawnPlace startNode="boardSpawn6Start" endNode="boardSpawn6End" fillTypes="BOARDS"/>
+                <spawnPlace startNode="boardSpawn7Start" endNode="boardSpawn7End" fillTypes="BOARDS"/>
+                <spawnPlace startNode="boardSpawn8Start" endNode="boardSpawn8End" fillTypes="BOARDS"/>
+                <spawnPlace startNode="boardSpawn9Start" endNode="boardSpawn9End" fillTypes="BOARDS"/>
+
+                <spawnPlace startNode="woodbeamSpawn1Start" endNode="woodbeamSpawn1End" fillTypes="WOODBEAM"/>
+                <spawnPlace startNode="woodbeamSpawn2Start" endNode="woodbeamSpawn2End" fillTypes="WOODBEAM"/>
+                <spawnPlace startNode="woodbeamSpawn3Start" endNode="woodbeamSpawn3End" fillTypes="WOODBEAM"/>
+                <spawnPlace startNode="woodbeamSpawn4Start" endNode="woodbeamSpawn4End" fillTypes="WOODBEAM"/>
+                <spawnPlace startNode="woodbeamSpawn5Start" endNode="woodbeamSpawn5End" fillTypes="WOODBEAM"/>
+                <spawnPlace startNode="woodbeamSpawn6Start" endNode="woodbeamSpawn6End" fillTypes="WOODBEAM"/>
+
+                <spawnPlace startNode="plankSpawn1Start" endNode="plankSpawn1End" fillTypes="PLANKS"/>
+                <spawnPlace startNode="plankSpawn2Start" endNode="plankSpawn2End" fillTypes="PLANKS"/>
+                <spawnPlace startNode="plankSpawn3Start" endNode="plankSpawn3End" fillTypes="PLANKS"/>
+                <spawnPlace startNode="plankSpawn4Start" endNode="plankSpawn4End" fillTypes="PLANKS"/>
+                <spawnPlace startNode="plankSpawn5Start" endNode="plankSpawn5End" fillTypes="PLANKS"/>
+                <spawnPlace startNode="plankSpawn6Start" endNode="plankSpawn6End" fillTypes="PLANKS"/>
+                <spawnPlace startNode="plankSpawn7Start" endNode="plankSpawn7End" fillTypes="PLANKS"/>
+                <spawnPlace startNode="plankSpawn8Start" endNode="plankSpawn8End" fillTypes="PLANKS"/>
+                <spawnPlace startNode="plankSpawn9Start" endNode="plankSpawn9End" fillTypes="PLANKS"/>
+            </spawnPlaces>
+        </palletSpawner>
+
+        <playerTrigger node="playerTrigger" />
+
+        <sounds>
+            <idle template="carpenterIdle" linkNode="0>" />
+            <active template="carpenterWork" linkNode="0>" />
+        </sounds>
+    </productionPoint>
+
+    <triggerMarkers>
+        <triggerMarker node="unloadWoodPlayerTriggerMarker" filename="$data/shared/assets/marker/markerIcons.xml" id="EXCLAMATION_MARK" adjustToGround="true" />
+        <triggerMarker node="unloadWoodTriggerMarker" filename="$data/shared/assets/marker/markerIcons.xml" id="UNLOAD" adjustToGround="true" />
+        <triggerMarker node="loadWoodchipTriggerMarker" filename="$data/shared/assets/marker/markerIcons.xml" id="LOAD" adjustToGround="true" />
+        <triggerMarker node="playerTriggerMarker" filename="$data/shared/assets/marker/markerIcons.xml" id="WRENCH" adjustToGround="false" />
+    </triggerMarkers>
+
+    <i3dMappings>
+        <i3dMapping id="warningStripes" node="0>" />
+        <i3dMapping id="sawmillLinkNode" node="0>0|0" />
+        <i3dMapping id="shedLinkNode" node="0>0|1" />
+        <i3dMapping id="clearArea1Start" node="0>1|0" />
+        <i3dMapping id="clearArea1Width" node="0>1|0|0" />
+        <i3dMapping id="clearArea1Height" node="0>1|0|1" />
+        <i3dMapping id="levelArea1Start" node="0>2|0" />
+        <i3dMapping id="levelArea1Width" node="0>2|0|0" />
+        <i3dMapping id="levelArea1Height" node="0>2|0|1" />
+        <i3dMapping id="indoorArea1Start" node="0>3|0" />
+        <i3dMapping id="indoorArea1Width" node="0>3|0|0" />
+        <i3dMapping id="indoorArea1Height" node="0>3|0|1" />
+        <i3dMapping id="testArea1Start" node="0>4|0" />
+        <i3dMapping id="testArea1End" node="0>4|0|0" />
+        <i3dMapping id="tipOcclusionUpdateArea1Start" node="0>5|0" />
+        <i3dMapping id="tipOcclusionUpdateArea1End" node="0>5|0|0" />
+        
+        <i3dMapping id="infoTrigger" node="0>6|0" />
+        <i3dMapping id="teleportNode" node="0>6|1" />
+        <i3dMapping id="playerTrigger" node="0>6|2" />
+        <i3dMapping id="playerTriggerMarker" node="0>6|2|0" />
+
+        <!-- <i3dMapping id="realLightsLow" node="0>9|0|0" />
+        <i3dMapping id="realLightsHigh" node="0>9|0|1" />
+        <i3dMapping id="linkedLight1" node="0>9|1|0" />
+        <i3dMapping id="linkedLight2" node="0>9|1|1" />
+        <i3dMapping id="linkedLight3" node="0>9|1|2" />
+        <i3dMapping id="linkedLight4" node="0>9|1|3" />
+        <i3dMapping id="linkedLight5" node="0>9|1|4" />
+        <i3dMapping id="linkedLight6" node="0>9|1|5" />
+        <i3dMapping id="linkedLight7" node="0>9|1|6" />
+        <i3dMapping id="linkedLight8" node="0>9|1|7" />
+        <i3dMapping id="linkedLight9" node="0>9|1|8" /> -->
+
+        <i3dMapping id="unloadWoodTrigger" node="0>8|0" />
+        <i3dMapping id="unloadWoodPlayerTrigger" node="0>8|1" />
+        <i3dMapping id="unloadWoodPlayerTriggerMarker" node="0>8|2" />
+        <i3dMapping id="unloadWoodTriggerMarker" node="0>8|3" />
+        <i3dMapping id="unloadWoodTriggerAINode" node="0>8|4" />
+        <i3dMapping id="unloadContainerTrigger" node="0>8|5" />
+
+        <i3dMapping id="loadingStation" node="0>9|0|0" />
+        <i3dMapping id="loadWoodchipTrigger" node="0>9|0|0" />
+        <i3dMapping id="loadWoodchipTriggerMarker" node="0>9|0|1" />
+
+        <i3dMapping id="productionSpawners" node="0>9|1" />
+        <i3dMapping id="boardSpawner" node="0>9|1|0" />
+        <i3dMapping id="boardSpawn1Start" node="0>9|1|0|0" />
+        <i3dMapping id="boardSpawn1End" node="0>9|1|0|0|0" />
+        <i3dMapping id="boardSpawn2Start" node="0>9|1|0|1" />
+        <i3dMapping id="boardSpawn2End" node="0>9|1|0|1|0" />
+        <i3dMapping id="boardSpawn3Start" node="0>9|1|0|2" />
+        <i3dMapping id="boardSpawn3End" node="0>9|1|0|2|0" />
+        <i3dMapping id="boardSpawn4Start" node="0>9|1|0|3" />
+        <i3dMapping id="boardSpawn4End" node="0>9|1|0|3|0" />
+        <i3dMapping id="boardSpawn5Start" node="0>9|1|0|4" />
+        <i3dMapping id="boardSpawn5End" node="0>9|1|0|4|0" />
+        <i3dMapping id="boardSpawn6Start" node="0>9|1|0|5" />
+        <i3dMapping id="boardSpawn6End" node="0>9|1|0|5|0" />
+        <i3dMapping id="boardSpawn7Start" node="0>9|1|0|6" />
+        <i3dMapping id="boardSpawn7End" node="0>9|1|0|6|0" />
+        <i3dMapping id="boardSpawn8Start" node="0>9|1|0|7" />
+        <i3dMapping id="boardSpawn8End" node="0>9|1|0|7|0" />
+        <i3dMapping id="boardSpawn9Start" node="0>9|1|0|8" />
+        <i3dMapping id="boardSpawn9End" node="0>9|1|0|8|0" />
+
+        <i3dMapping id="woodbeamSpawner" node="0>9|1|1" />
+        <i3dMapping id="woodbeamSpawn1Start" node="0>9|1|1|0" />
+        <i3dMapping id="woodbeamSpawn1End" node="0>9|1|1|0|0" />
+        <i3dMapping id="woodbeamSpawn2Start" node="0>9|1|1|1" />
+        <i3dMapping id="woodbeamSpawn2End" node="0>9|1|1|1|0" />
+        <i3dMapping id="woodbeamSpawn3Start" node="0>9|1|1|2" />
+        <i3dMapping id="woodbeamSpawn3End" node="0>9|1|1|2|0" />
+        <i3dMapping id="woodbeamSpawn4Start" node="0>9|1|1|3" />
+        <i3dMapping id="woodbeamSpawn4End" node="0>9|1|1|3|0" />
+        <i3dMapping id="woodbeamSpawn5Start" node="0>9|1|1|4" />
+        <i3dMapping id="woodbeamSpawn5End" node="0>9|1|1|4|0" />
+        <i3dMapping id="woodbeamSpawn6Start" node="0>9|1|1|5" />
+        <i3dMapping id="woodbeamSpawn6End" node="0>9|1|1|5|0" />
+
+        <i3dMapping id="plankSpawner1" node="0>9|1|2" />
+        <i3dMapping id="plankSpawn1Start" node="0>9|1|2|0" />
+        <i3dMapping id="plankSpawn1End" node="0>9|1|2|0|0" />
+        <i3dMapping id="plankSpawn2Start" node="0>9|1|2|1" />
+        <i3dMapping id="plankSpawn2End" node="0>9|1|2|1|0" />
+        <i3dMapping id="plankSpawn3Start" node="0>9|1|2|2" />
+        <i3dMapping id="plankSpawn3End" node="0>9|1|2|2|0" />
+        <i3dMapping id="plankSpawn4Start" node="0>9|1|2|3" />
+        <i3dMapping id="plankSpawn4End" node="0>9|1|2|3|0" />
+        <i3dMapping id="plankSpawn5Start" node="0>9|1|2|4" />
+        <i3dMapping id="plankSpawn5End" node="0>9|1|2|4|0" />
+        <i3dMapping id="plankSpawn6Start" node="0>9|1|2|5" />
+        <i3dMapping id="plankSpawn6End" node="0>9|1|2|5|0" />
+        <i3dMapping id="plankSpawn7Start" node="0>9|1|2|6" />
+        <i3dMapping id="plankSpawn7End" node="0>9|1|2|6|0" />
+        <i3dMapping id="plankSpawn8Start" node="0>9|1|2|7" />
+        <i3dMapping id="plankSpawn8End" node="0>9|1|2|7|0" />
+        <i3dMapping id="plankSpawn9Start" node="0>9|1|2|8" />
+        <i3dMapping id="plankSpawn9End" node="0>9|1|2|8|0" />
+    </i3dMappings>
+</placeable>

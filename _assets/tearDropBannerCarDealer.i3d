@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="iso-8859-1"?>
+<i3D name="tearDropBannerCarDealer.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+    <Asset>
+        <Export program="GIANTS Editor 64bit" version="9.0.4"/>
+    </Asset>
+    <Files>
+        <File fileId="3" filename="$data/maps/mapAlpine/textures/props/teardropBanner01_normal.png"/>
+        <File fileId="4" filename="$data/maps/mapAlpine/textures/props/teardropBanner01_specular.png"/>
+        <File fileId="5" filename="$data/maps/mapUS/textures/carDealerDecals_diffuse.png"/>
+        <File fileId="2" filename="$data/maps/mapUS/textures/props/teardropBanner_diffuse.png"/>
+        <File fileId="6" filename="$data/shared/default_normal.png"/>
+        <File fileId="7" filename="$data/shared/default_specular.png"/>
+    </Files>
+    <Materials>
+        <Material name="carDealerDecals_mat" materialId="134">
+            <Texture fileId="5"/>
+            <Normalmap fileId="6"/>
+            <Glossmap fileId="7"/>
+        </Material>
+        <Material name="lambert1" materialId="393" diffuseColor="0.494118 0.494118 0.494118 1"/>
+        <Material name="teardropBanner_mat" materialId="640">
+            <Texture fileId="2"/>
+            <Normalmap fileId="3"/>
+            <Glossmap fileId="4"/>
+        </Material>
+    </Materials>
+    <Shapes externalShapesFile="tearDropBannerCarDealer.i3d.shapes"/>
+    <Dynamics/>
+    <Scene>
+        <Shape shapeId="1" name="teardropBannerCarDealer" lockedgroup="true" translation="-12.0557 0.0344467 0.3195" rotation="-0 -90 0" static="true" clipDistance="80" nodeId="13941" materialIds="393" castsShadows="true" receiveShadows="true" nonRenderable="true">
+            <Shape shapeId="2" name="teardropBanner01Vis" clipDistance="70" nodeId="13942" materialIds="640" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="3" name="decalFront" translation="0.408437 2.28833 0.000126173" clipDistance="100" nodeId="13943" materialIds="134" castsShadows="true" receiveShadows="true" decalLayer="1"/>
+        </Shape>
+    </Scene>
+</i3D>

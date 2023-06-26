@@ -1,28 +1,53 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<modDesc descVersion="71">
+<modDesc descVersion="75">
     <author>GMNGjoy</author>
-    <version>1.0.0.1</version>
+    <version>0.9.0.0</version>
     <title>
-        <en>Mineshaft Boost</en>
+        <en>Bandsaw Mill</en>
+        <de>Bandsaw Mill</de>
     </title>
     <description>
         <en>
-            <![CDATA[This script based mod increases the output speed of the Mineshaft on Silverrun Forest
+            <![CDATA[Mini Bandsaw Mill properly sized for your farm.
             
 Changelog:
-1.0.0.1 - Corrected Modhub Icon
-1.0.0.0 - Initial Release
-0.3.0.0 - Xml file config working
-0.2.0.0 - Add xml file config
-0.1.0.0 - Boost by hardcoded factor working
 0.0.0.1 - Initial commit
 ]]>
 		</en>
     </description>
-    <iconFilename>modHubIcon.dds</iconFilename>
+    <iconFilename>icon_bandsawMill.dds</iconFilename>
     <multiplayer supported="true" />
 
-	<extraSourceFiles>
-		<sourceFile filename="mineshaftBoost.lua"/>
-	</extraSourceFiles>
+	<storeItems>
+        <storeItem xmlFilename="xml/bandsawMill.xml" />
+        <storeItem xmlFilename="xml/bandsawMillShed.xml" />
+        <storeItem xmlFilename="xml/bandsawMillSellpoint.xml" />
+    </storeItems>
+
+    <dependencies>
+        <depedency>pdlc_forestryPack</depedency>
+    </dependencies>
+
+    <l10n>
+        <text name="fillType_woodBeam">
+            <en>Wood Beam</en>
+            <de>Wood Beam</de>
+        </text>
+        <text name="fillType_planks">
+            <en>Planks Long</en>
+            <de>Planks Long</de>
+        </text>
+        <text name="shopItem_bandsawMill">
+            <en>Bandsaw Mill (Wood-Mizer LT15)</en>
+            <de>Bandsaw Mill (Wood-Mizer LT15)</de>
+        </text>
+        <text name="shopItem_bandsawMillShed">
+            <en>Bandsaw Mill Shed (Wood-Mizer LT15)</en>
+            <de>Bandsaw Mill Shed (Wood-Mizer LT15)</de>
+        </text>
+        <text name="shopItem_bandsawMillSellpoint">
+            <en>Bandsaw Mill Sellpoint (Wood-Mizer LT15)</en>
+            <de>Bandsaw Mill Sellpoint (Wood-Mizer LT15)</de>
+        </text>
+    </l10n>
 </modDesc>
