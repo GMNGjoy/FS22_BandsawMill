@@ -67,7 +67,7 @@
     </hotspots>
 
     <dynamicallyLoadedParts>
-        <dynamicallyLoadedPart filename="$pdlc/forestryPack/placeables/productionPoints/sawmillPlaceable/sawmillPlaceable.i3d" node="0|1" linkNode="sawmillLinkNode" />
+        <dynamicallyLoadedPart filename="$pdlcdir/forestryPack/placeables/productionPoints/sawmillPlaceable/sawmillPlaceable.i3d" node="0|1" linkNode="sawmillLinkNode" />
     </dynamicallyLoadedParts>
 
     <!-- <lights>
@@ -107,9 +107,9 @@
                     <output fillType="WOODCHIPS" amount="10" />
                 </outputs>
             </production>
-        
+
             <!-- DLC -->
-            <production id="woodbeam" name="%s (%s)" params="$l10n_fillType_wood|$l10n_fillType_woodBeam" cyclesPerHour="1" costsPerActiveHour="2">
+            <production id="woodbeam" name="%s (%s)" params="$l10n_fillType_wood|$l10n_fillType_woodBeam" cyclesPerHour="10" costsPerActiveHour="2">
                 <inputs>
                     <input fillType="WOOD" amount="1000" />
                 </inputs>
@@ -118,7 +118,7 @@
                     <output fillType="WOODCHIPS" amount="45" />
                 </outputs>
             </production>
-            <production id="planks" name="%s (%s)" params="$l10n_fillType_wood|$l10n_fillType_planks" cyclesPerHour="1" costsPerActiveHour="2">
+            <production id="planks" name="%s (%s)" params="$l10n_fillType_wood|$l10n_fillType_planks" cyclesPerHour="10" costsPerActiveHour="2">
                 <inputs>
                     <input fillType="WOOD" amount="1000" />
                 </inputs>
@@ -127,20 +127,32 @@
                     <output fillType="WOODCHIPS" amount="230" />
                 </outputs>
             </production>
+
+            <production id="delivery" name="%s Delivery" params="$l10n_fillType_wood" cyclesPerHour="10" costsPerActiveHour="0.5">
+                <inputs>
+                    <input fillType="WOOD" amount="100" />
+                </inputs>
+                <outputs>
+                    <output fillType="WOOD" amount="100" />
+                </outputs>
+            </production>
         </productions>
 
         <storage isExtension="false" fillLevelSyncThreshold="50" >
-            <capacity fillType="WOOD"      capacity="100000" />
+            <capacity fillType="WOOD"      capacity="250000" />
             <capacity fillType="BOARDS"    capacity="18000" />
             <capacity fillType="WOODCHIPS" capacity="10000"  />
 
             <!-- Platinum DLC -->
             <capacity fillType="WOODBEAM" capacity="10000" />
             <capacity fillType="PLANKS" capacity="10000" />
+
+            <!-- Show the WoodChips Filling up-->
+            <fillPlane fillType="WOODCHIPS" node="woodChipsFillPlane" minY="-0.875" maxY="0" />
         </storage>
 
         <sellingStation node="sellingStation" supportsExtension="false">
-            <unloadTrigger fillTypes="WOOD" >
+            <unloadTrigger fillTypes="WOOD" priceScale="1.15" >
                 <woodTrigger triggerNode="unloadWoodTrigger" activationTriggerNode="unloadWoodPlayerTrigger" />
             </unloadTrigger>
             <!-- <unloadTrigger fillTypes="WOOD" priceScale="1.75">
@@ -206,6 +218,7 @@
         <i3dMapping id="warningStripes" node="0>" />
         <i3dMapping id="sawmillLinkNode" node="0>0|0" />
         <i3dMapping id="shedLinkNode" node="0>0|1" />
+        <i3dMapping id="woodChipsFillPlane" node="0>0|8|2" />
         <i3dMapping id="clearArea1Start" node="0>1|0" />
         <i3dMapping id="clearArea1Width" node="0>1|0|0" />
         <i3dMapping id="clearArea1Height" node="0>1|0|1" />
@@ -219,7 +232,8 @@
         <i3dMapping id="testArea1End" node="0>4|0|0" />
         <i3dMapping id="tipOcclusionUpdateArea1Start" node="0>5|0" />
         <i3dMapping id="tipOcclusionUpdateArea1End" node="0>5|0|0" />
-        
+
+
         <i3dMapping id="infoTrigger" node="0>6|0" />
         <i3dMapping id="teleportNode" node="0>6|1" />
         <i3dMapping id="playerTrigger" node="0>6|2" />

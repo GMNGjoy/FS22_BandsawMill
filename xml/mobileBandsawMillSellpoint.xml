@@ -29,25 +29,10 @@
         <canBeRenamed>true</canBeRenamed>
     </base>
 
-    <placement useRandomYRotation="false" useManualYRotation="true" >
-        <testAreas>
-            <testArea startNode="testArea1Start" endNode="testArea1End" />
-        </testAreas>
-        <sounds>
-            <place template="smallImp" />
-        </sounds>
-    </placement>
+    <placement useRandomYRotation="false" useManualYRotation="true" />
 
-    <clearAreas>
-        <clearArea startNode="clearArea1Start" widthNode="clearArea1Width" heightNode="clearArea1Height"/>
-    </clearAreas>
-
-    <leveling requireLeveling="true" maxSmoothDistance="10" maxSlope="75" maxEdgeAngle="30" >
-        <levelAreas>
-            <levelArea startNode="levelArea1Start" widthNode="levelArea1Width" heightNode="levelArea1Height" groundType="dirt"/>
-        </levelAreas>
-    </leveling>
-
+    <clearAreas />
+    <leveling  />
     <indoorAreas />
 
     <tipOcclusionUpdateAreas>
@@ -70,34 +55,8 @@
         <dynamicallyLoadedPart filename="$pdlcdir/forestryPack/placeables/productionPoints/sawmillPlaceable/sawmillPlaceable.i3d" node="0|1" linkNode="sawmillLinkNode" />
     </dynamicallyLoadedParts>
 
-    <!-- <lights>
-        <group weatherRequiredFlags="NIGHT" />
-
-        <sharedLight filename="$data/shared/assets/lights/terraLed/fluorescentTube50W.xml"          linkNode="linkedLight1" groupIndex="1"/>
-        <sharedLight filename="$data/shared/assets/lights/terraLed/fluorescentTube50W.xml"          linkNode="linkedLight2" groupIndex="1"/>
-        <sharedLight filename="$data/shared/assets/lights/terraLed/fluorescentTube50W.xml"          linkNode="linkedLight3" groupIndex="1"/>
-        <sharedLight filename="$data/shared/assets/lights/terraLed/fluorescentTube50W.xml"          linkNode="linkedLight4" groupIndex="1"/>
-        <sharedLight filename="$data/shared/assets/lights/lizard/buildings/industrialWallLight.xml" linkNode="linkedLight5" groupIndex="1"/>
-        <sharedLight filename="$data/shared/assets/lights/lizard/buildings/industrialWallLight.xml" linkNode="linkedLight6" groupIndex="1"/>
-        <sharedLight filename="$data/shared/assets/lights/lizard/buildings/industrialWallLight.xml" linkNode="linkedLight7" groupIndex="1"/>
-        <sharedLight filename="$data/shared/assets/lights/terraLed/fluorescentTube50W.xml"          linkNode="linkedLight8" groupIndex="1"/>
-        <sharedLight filename="$data/shared/assets/lights/terraLed/fluorescentTube50W.xml"          linkNode="linkedLight9" groupIndex="1"/>
-
-        <lightShape node="interiorSelfIllum" groupIndex="1"/>
-        <lightShape node="interiorSelfIllumLOD" groupIndex="1"/>
-
-        <realLights>
-            <low>
-                <light node="realLightsLow" groupIndex="1"/>
-            </low>
-            <high>
-                <light node="realLightsHigh" groupIndex="1"/>
-            </high>
-        </realLights>
-    </lights> -->
-
     <sellingStation appearsOnStats="true" litersForFullPriceDrop="1000000" fullPriceRecoverHours="24" supportsExtension="false">
-        <unloadTrigger fillTypes="WOOD" >
+        <unloadTrigger fillTypes="WOOD" priceScale="1.15">
             <woodTrigger triggerNode="unloadWoodTrigger" activationTriggerNode="unloadWoodPlayerTrigger" />
         </unloadTrigger>
         <!-- <unloadTrigger fillTypes="WOOD" priceScale="1.75">
@@ -128,7 +87,7 @@
         <i3dMapping id="testArea1End" node="0>4|0|0" />
         <i3dMapping id="tipOcclusionUpdateArea1Start" node="0>5|0" />
         <i3dMapping id="tipOcclusionUpdateArea1End" node="0>5|0|0" />
-        
+
         <i3dMapping id="infoTrigger" node="0>6|0" />
         <i3dMapping id="teleportNode" node="0>6|1" />
         <i3dMapping id="playerTrigger" node="0>6|2" />

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<modDesc descVersion="75">
+<modDesc descVersion="80">
     <author>GMNGjoy</author>
-    <version>0.9.0.0</version>
+    <version>0.9.1.0</version>
     <title>
         <en>Bandsaw Mill</en>
         <de>Bandsaw Mill</de>
@@ -9,8 +9,10 @@
     <description>
         <en>
             <![CDATA[Mini Bandsaw Mill properly sized for your farm.
-            
+
 Changelog:
+0.9.1.0 = Added pdlcScript
+0.9.0.0 - Everything working, locally
 0.0.0.1 - Initial commit
 ]]>
 		</en>
@@ -27,6 +29,10 @@ Changelog:
     <dependencies>
         <depedency>pdlc_forestryPack</depedency>
     </dependencies>
+
+    <extraSourceFiles>
+        <sourceFile filename="pdlcFilename.lua" />
+    </extraSourceFiles>
 
     <l10n>
         <text name="fillType_woodBeam">

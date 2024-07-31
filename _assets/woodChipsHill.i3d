@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="woodChipsHill.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="9.0.4"/>
+  </Asset>
+
+  <Files>
+    <File fileId="1" filename="$data/fillPlanes/woodChips_diffuse.png"/>
+    <File fileId="2" filename="$data/fillPlanes/woodChips_normal.png"/>
+    <File fileId="3" filename="$data/fillPlanes/woodChips_specular.png"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="woodChipPile_mat" materialId="8">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="woodChipsHill.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+      <Shape shapeId="1" name="woodChipsHill" kinematic="true" clipDistance="200" nodeId="48" materialIds="8" castsShadows="true" receiveShadows="true"/>
+  </Scene>
+
+</i3D>
