@@ -2,7 +2,7 @@
 
 <i3D name="bandsawmillSellpoint.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
   <Asset>
-    <Export program="GIANTS Editor 64bit" version="9.0.4"/>
+    <Export program="GIANTS Editor 64bit" version="9.0.6"/>
   </Asset>
 
   <Files>
@@ -74,11 +74,12 @@
           <TransformGroup name="unloadWoodTriggerAINode" translation="-2 1.51833e-07 0" rotation="0 -5.00896e-06 0" nodeId="42"/>
           <Shape shapeId="4" name="containerTrigger" translation="0 0 8.71798e-07" rotation="-0 90 0" scale="1 1 2" visibility="false" kinematic="true" trigger="true" nodeId="43" materialIds="5" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
           <TransformGroup name="warningStripeGroup-wood" translation="0 0.01 0" nodeId="44">
-            <Shape shapeId="5" name="warningStripe" translation="5 0 5" rotation="90 90 3.47553e-05" scale="0.01 0.01 0.01" nodeId="45" materialIds="6"/>
-            <Shape shapeId="5" name="warningStripe" translation="-5 0 5" rotation="90 0 1.33731e-05" scale="0.01 0.01 0.01" nodeId="46" materialIds="6"/>
-            <Shape shapeId="5" name="warningStripe" translation="5 0 -5" rotation="-90 0 -180" scale="0.01 0.01 0.01" nodeId="47" materialIds="6"/>
-            <Shape shapeId="5" name="warningStripe" translation="-5 0 -5" rotation="-90 -90 -180" scale="0.01 0.01 0.01" nodeId="48" materialIds="6"/>
+            <Shape shapeId="5" name="warningStripe" translation="5 0 5" rotation="90 90 3.47553e-05" scale="0.01 0.01 0.01" nodeId="45" materialIds="6" receiveShadows="true" occluder="true"/>
+            <Shape shapeId="5" name="warningStripe" translation="-5 0 5" rotation="90 0 1.33731e-05" scale="0.01 0.01 0.01" nodeId="46" materialIds="6" receiveShadows="true" occluder="true"/>
+            <Shape shapeId="5" name="warningStripe" translation="5 0 -5" rotation="-90 0 -180" scale="0.01 0.01 0.01" nodeId="47" materialIds="6" receiveShadows="true" occluder="true"/>
+            <Shape shapeId="5" name="warningStripe" translation="-5 0 -5" rotation="-90 -90 -180" scale="0.01 0.01 0.01" nodeId="48" materialIds="6" receiveShadows="true" occluder="true"/>
           </TransformGroup>
+          <Shape shapeId="6" name="unloadBulkTrigger" visibility="false" static="true" trigger="true" collisionMask="1073741824" nodeId="231" materialIds="5" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
         </TransformGroup>
       </TransformGroup>
   </Scene>
