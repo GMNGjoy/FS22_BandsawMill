@@ -4,20 +4,18 @@
     <version>1.0.0.0</version>
     <title>
         <en>Bandsaw Mill</en>
-        <de>Bandsaw Mill</de>
+        <de>Bandsägewerk</de>
     </title>
     <description>
         <en>
-            <![CDATA[
-A Homestead-sized Bandsaw mill for your farm - two different production versions or an easy to use sellpoint!
+<![CDATA[A Homestead-sized Bandsaw mill for your farm - two different production versions or an easy to use sellpoint!
 
-For license & feedback, please visit: https://github.com/GMNGjoy/FS22_BandsawMill
-]]>
+For license & feedback, please visit: https://github.com/GMNGjoy/FS22_BandsawMill]]>
 		</en>
         <de>
-<![CDATA[
+<![CDATA[Ein Bandsägewerk für's eigene Gehöft - zwei verschiedene Produtkionsvarianten oder eine einfach zu verwendende Verkaufsstation
 
-]]>
+Besucht für Lizenz & Feedback bitte https://github.com/GMNGjoy/FS22_BandsawMill]]>
         </de>
     </description>
     <iconFilename>icon_bandsawMill.dds</iconFilename>
@@ -40,23 +38,23 @@ For license & feedback, please visit: https://github.com/GMNGjoy/FS22_BandsawMil
     <l10n>
         <text name="fillType_woodBeam">
             <en>Wood Beam</en>
-            <de>Wood Beam</de>
+            <de>Holzbalken</de>
         </text>
         <text name="fillType_planks">
             <en>Planks Long</en>
-            <de>Planks Long</de>
+            <de>Lange Bretter</de>
         </text>
         <text name="shopItem_bandsawMill">
             <en>Bandsaw Mill (Wood-Mizer LT15)</en>
-            <de>Bandsaw Mill (Wood-Mizer LT15)</de>
+            <de>Bandsägewerk (Wood-Mizer LT15)</de>
         </text>
         <text name="shopItem_bandsawMillShed">
             <en>Bandsaw Mill Shed (Wood-Mizer LT15)</en>
-            <de>Bandsaw Mill Shed (Wood-Mizer LT15)</de>
+            <de>Bandsägewerkhalle (Wood-Mizer LT15)</de>
         </text>
         <text name="shopItem_bandsawMillSellpoint">
             <en>Bandsaw Mill Sellpoint (Wood-Mizer LT15)</en>
-            <de>Bandsaw Mill Sellpoint (Wood-Mizer LT15)</de>
+            <de>Bandsägewerk Verkaufsstation (Wood-Mizer LT15)</de>
         </text>
     </l10n>
 </modDesc>
