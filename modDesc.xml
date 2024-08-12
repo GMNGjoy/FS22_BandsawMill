@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <modDesc descVersion="80">
     <author>GMNGjoy</author>
-    <version>0.9.3.0</version>
+    <version>1.0.0.0</version>
     <title>
         <en>Bandsaw Mill</en>
         <de>Bandsaw Mill</de>
     </title>
     <description>
         <en>
-            <![CDATA[Mini Bandsaw Mill properly sized for your farm.
+            <![CDATA[
+A Homestead-sized Bandsaw mill for your farm - two different production versions or an easy to use sellpoint!
 
-Changelog:
-0.9.3.0 - Added FillPlane for wood chips, cast shadowmaps on warning stripes
-0.9.2.0 - Added warning stripe leveling
-0.9.1.0 - Added pdlcScript
-0.9.0.0 - Everything working, locally
-0.0.0.1 - Initial commit
+For license & feedback, please visit: https://github.com/GMNGjoy/FS22_BandsawMill
 ]]>
 		</en>
+        <de>
+<![CDATA[
+
+]]>
+        </de>
     </description>
     <iconFilename>icon_bandsawMill.dds</iconFilename>
     <multiplayer supported="true" />
