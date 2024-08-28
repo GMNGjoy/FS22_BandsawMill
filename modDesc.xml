@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <modDesc descVersion="80">
     <author>GMNGjoy</author>
-    <version>1.0.0.0</version>
+    <version>1.0.0.0-beta</version>
     <title>
         <en>Bandsaw Mill</en>
         <de>Bandsägewerk</de>
@@ -9,6 +9,10 @@
     <description>
         <en>
 <![CDATA[A Homestead-sized Bandsaw mill for your farm - two different production versions or an easy to use sellpoint!
+
+The Platinum DLC is required, but only needs to be enabled to produce Long Planks & Wood Beams.
+
+Placement Note: If you wish to place a shed over the sawmill - place the shed first, then using free-placement mode, place the sawmill under the shed.
 
 For license & feedback, please visit: https://github.com/GMNGjoy/FS22_BandsawMill]]>
 		</en>
@@ -22,7 +26,7 @@ Besucht für Lizenz & Feedback bitte https://github.com/GMNGjoy/FS22_BandsawMill
     <multiplayer supported="true" />
 
 	<storeItems>
-        <storeItem xmlFilename="xml/bandsawMill.xml" />
+        <storeItem xmlFilename="xml/bandsawMillProduction.xml" />
         <storeItem xmlFilename="xml/bandsawMillShed.xml" />
         <storeItem xmlFilename="xml/bandsawMillSellpoint.xml" />
     </storeItems>

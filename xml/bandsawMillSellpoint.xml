@@ -6,7 +6,7 @@
             <function>$l10n_function_sellingPoint</function>
         </functions>
         <image>icons/store_bandsawMillSellpoint.png</image>
-        <price>10000</price>
+        <price>5000</price>
         <lifetime>100</lifetime>
         <canBeSold>true</canBeSold>
         <showInStore>true</showInStore>
@@ -60,8 +60,6 @@
         </updateAreas>
     </ai>
 
-    <infoTrigger triggerNode="infoTrigger"/>
-
     <hotspots>
         <hotspot type="UNLOADING" linkNode="teleportNode" teleportNode="teleportNode" />
     </hotspots>
@@ -71,17 +69,24 @@
     </dynamicallyLoadedParts>
 
     <sellingStation appearsOnStats="true" litersForFullPriceDrop="1000000" fullPriceRecoverHours="24" supportsExtension="false">
-        <unloadTrigger exactFillRootNode="unloadBulkTrigger" aiNode="unloadTriggerAINode" fillTypes="WOODCHIPS" />
-        <unloadTrigger fillTypes="WOOD" >
+        <unloadTrigger exactFillRootNode="unloadBulkTrigger" aiNode="unloadWoodTriggerAINode" fillTypes="WOODCHIPS BOARDS PLANKS WOODBEAM"/>
+        <unloadTrigger fillTypes="WOOD" priceScale="1.5">
             <woodTrigger triggerNode="unloadWoodTrigger" activationTriggerNode="unloadWoodPlayerTrigger" />
         </unloadTrigger>
         <unloadTrigger fillTypes="WOOD" priceScale="1.75">
             <woodTrigger triggerNode="unloadContainerTrigger" class="PalletUnloadTrigger" />
         </unloadTrigger>
+
+        <fillType name="WOOD"      priceScale="1.5" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="WOODCHIPS" priceScale="1.5" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="WOODBEAM"  priceScale="1.25" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="BOARDS"    priceScale="1.25" supportsGreatDemand="true" disablePriceDrop="false" />
+        <fillType name="PLANKS"    priceScale="1.25" supportsGreatDemand="true" disablePriceDrop="false" />
     </sellingStation>
 
     <triggerMarkers>
         <triggerMarker node="unloadWoodPlayerTriggerMarker" filename="$data/shared/assets/marker/markerIcons.xml" id="EXCLAMATION_MARK" adjustToGround="true" />
+        <triggerMarker node="unloadWoodTriggerMarker" filename="$data/shared/assets/marker/markerIcons.xml" id="UNLOAD" adjustToGround="true" />
 
         <triggerMarker node="warningStripe-loading-1" adjustToGround="true" />
         <triggerMarker node="warningStripe-loading-2" adjustToGround="true" />
@@ -103,10 +108,7 @@
         <i3dMapping id="tipOcclusionUpdateArea1Start" node="0>5|0" />
         <i3dMapping id="tipOcclusionUpdateArea1End" node="0>5|0|0" />
 
-        <i3dMapping id="infoTrigger" node="0>6|0" />
-        <i3dMapping id="teleportNode" node="0>6|1" />
-        <i3dMapping id="playerTrigger" node="0>6|2" />
-        <i3dMapping id="playerTriggerMarker" node="0>6|2|0" />
+        <i3dMapping id="teleportNode" node="0>6|0" />
 
         <i3dMapping id="unloadWoodTrigger" node="0>8|0" />
         <i3dMapping id="unloadWoodPlayerTrigger" node="0>8|1" />

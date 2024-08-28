@@ -140,18 +140,18 @@
 
         <storage isExtension="false" fillLevelSyncThreshold="50" >
             <capacity fillType="WOOD"      capacity="250000" />
-            <capacity fillType="BOARDS"    capacity="18000" />
-            <capacity fillType="WOODCHIPS" capacity="10000"  />
+            <capacity fillType="BOARDS"    capacity="20000" />
+            <capacity fillType="WOODCHIPS" capacity="50000"  />
 
             <!-- Platinum DLC -->
-            <capacity fillType="WOODBEAM" capacity="10000" />
-            <capacity fillType="PLANKS" capacity="10000" />
+            <capacity fillType="WOODBEAM" capacity="20000" />
+            <capacity fillType="PLANKS" capacity="20000" />
 
             <!-- Show the WoodChips Filling up-->
             <fillPlane fillType="WOODCHIPS" node="woodChipsFillPlane" minY="-0.875" maxY="0" />
         </storage>
 
-        <sellingStation node="sellingStation" supportsExtension="false">
+        <sellingStation node="sellingStation" supportsExtension="false" hideFromPricesMenu="true">
             <unloadTrigger fillTypes="WOOD" priceScale="1.15" >
                 <woodTrigger triggerNode="unloadWoodTrigger" activationTriggerNode="unloadWoodPlayerTrigger" />
             </unloadTrigger>
@@ -162,7 +162,7 @@
         </sellingStation>
 
         <loadingStation node="loadingStation" supportsExtension="false">
-            <loadTrigger fillTypes="WOODCHIPS WOOD" triggerNode="loadWoodchipTrigger" fillLitersPerSecond="1000" />
+            <loadTrigger fillTypes="WOODCHIPS WOOD" triggerNode="loadWoodchipTrigger" fillLitersPerSecond="1500" />
         </loadingStation>
 
         <palletSpawner node="productionSpawners">
@@ -199,8 +199,8 @@
         <playerTrigger node="playerTrigger" />
 
         <sounds>
-            <idle template="carpenterIdle" linkNode="0>" />
-            <active template="carpenterWork" linkNode="0>" />
+            <idle template="carpenterIdle" linkNode="0>" volumeScale="0.5" />
+            <active template="carpenterWork" linkNode="0>" volumeScale="0.5" />
         </sounds>
     </productionPoint>
 
