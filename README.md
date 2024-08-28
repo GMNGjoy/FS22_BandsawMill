@@ -3,7 +3,7 @@ I've been a woodworker for years now, and if I had the space - I'd totally want 
 
 This mod is PC-only due to a script (that is similar to the same script that Giants uses) to map the `$pdlc` path to where you have installed your dlc's. Ideally, this could be all platforms, if that script was included the basegame.
 
-...and making "prefab walls" from a bandsaw mill is just plain unrealisitc. Shame on you, Giants!
+... and the other reason I didn't like using the shed-mill thing that was included in the Platinum Edition - if you have a bandsaw mill - you're not going to be making "prefab walls"... that's just plain unrealisitc. Shame on you, Giants!
 
 
 ## Description from the ModDesc
@@ -26,7 +26,7 @@ _Enjoy!_
 ## Screenshots
 
 ![Bandsaw Mill Sellpoint](/_screenshots/bandsawMill_1_sellpoint.png)
-_Bandsaw Mill Sellpoint accepting wood, woodchips, and other wood products_
+_Bandsaw Mill Sellpoint accepting Wood, Wood Chips, and other wood products_
 
 ![Bandsaw Mill Production](/_screenshots/bandsawMill_2_production.png)
 _Bandsaw Mill Production in the open - making Planks, Long Planks and Wood Beams, with a byproduct of Wood Chips_
